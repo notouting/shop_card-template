@@ -12,7 +12,7 @@ form.addEventListener("submit", (evt) => {
 
 ${icon.value}${ism.value}
 
-${icon.value}Сезон:${sezon.value}
+🔥Сезон:${sezon.value}
 
 💸Цена:${narx.value}$
 
