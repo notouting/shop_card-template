@@ -1,36 +1,25 @@
-let form = document.querySelector("form")
+let form = document.querySelector("form");
 
 form.addEventListener("submit", (evt) => {
-    evt.preventDefault()
+    evt.preventDefault();
 
-    let [predzakaz, icon, ism, sezon, narx, razmer, btn] = form
+    let [title, icon, minPrice, maxPrice, weight, weightError, cargoPrice, sizes] = form;
 
     let text = `
-🔱НОВАЯ КОЛЛЕКЦИЯ🔱
+📌 **Название товара:** ${title.value}
+💰 **Цена:** от ${minPrice.value}$ до ${maxPrice.value}$
+⚖ **Вес:** ${weight.value} ± ${weightError.value} кг
+🚛 **Цена за карго:** ${cargoPrice.value}$
+📏 **Размеры / Варианты:** ${sizes.value}
 
-🇺🇿На предзаказ "${predzakaz.value}"
+🔹 По вопросам: @drop_market_support
+🔹 Активная ссылка: @drop_market_uz
+`;
 
-${icon.value}${ism.value}
-
-🔥Сезон:${sezon.value}
-
-💸Цена:${narx.value}$
-
-⚜️Размеры:${razmer.value}
-
-❔По вопросам :
-@kias_shop_support
-
-Активная ссылка: 
-@KIAS_Shop_clothes`
-
-    copyWord(text)
-    alert("copied to clipboard")
-})
+    copyWord(text);
+    alert("Текст скопирован в буфер обмена!");
+});
 
 const copyWord = (value) => {
-
     navigator.clipboard.writeText(value);
-
-    alert("Copied the text: " + value);
-}
+};
