@@ -18,17 +18,19 @@
                     
                     <textarea class="form-control mb-2" placeholder="Описание товара" rows="3" required></textarea>
                     
-                    <input class="form-control mb-2" type="text" placeholder="Мин. цена" required>
-                    <input class="form-control mb-2" type="text" placeholder="Макс. цена" required>
+                    <input class="form-control mb-2" type="text" placeholder="Мин. цена (CNY)" id="min-price-cny" required>
+                    <input class="form-control mb-2" type="text" placeholder="Макс. цена (CNY)" id="max-price-cny" required>
+                    
                     <select class="form-select mb-2" id="currency">
                         <option value="$">USD ($)</option>
                         <option value="сум">UZS (сум)</option>
+                        <option value="¥">CNY (¥)</option>
                     </select>
 
-                    <input class="form-control mb-2" type="text" placeholder="Вес (кг)" required>
-                    <input class="form-control mb-2" type="text" placeholder="Погрешность веса (кг)" required>
+                    <input class="form-control mb-2" type="text" placeholder="Вес (кг)">
+                    <input class="form-control mb-2" type="text" placeholder="Погрешность веса (кг)">
                     
-                    <input class="form-control mb-2" type="text" placeholder="Цена за карго" required>
+                    <input class="form-control mb-2" type="text" placeholder="Цена за карго">
                     <input class="form-control mb-2" type="text" placeholder="Размеры / Варианты" required>
                     
                     <button class="btn btn-primary mt-2 w-100" type="submit">Скопировать</button>
@@ -36,6 +38,7 @@
             </div>
         </div>
     </div>
+
     <script src="main.js"></script>
 </body>
 
