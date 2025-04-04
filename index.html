@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <title>Товарная карточка</title>
@@ -13,18 +13,19 @@
     <div class="container d-grid col-12">
         <form class="card p-3">
             <input class="form-control mb-2" type="text" placeholder="Название товара" required>
-            <select class="form-select mb-2">
-                <option value="👟">👟</option>
-                <option value="🧢">🧢</option>
-                <option value="👕">👕</option>
-                <option value="🕶️">🕶️</option>
-                <option value="🩳">🩳</option>
-            </select>
-            <input class="form-control mb-2" type="text" placeholder="Минимальная цена ($)" required>
-            <input class="form-control mb-2" type="text" placeholder="Максимальная цена ($)" required>
-            <input class="form-control mb-2" type="text" placeholder="Вес (кг)" required>
-            <input class="form-control mb-2" type="text" placeholder="Погрешность веса (кг)" required>
-            <input class="form-control mb-2" type="text" placeholder="Цена за карго ($)" required>
+            <div class="d-flex gap-2">
+                <input class="form-control mb-2" type="text" placeholder="Мин. цена" required>
+                <input class="form-control mb-2" type="text" placeholder="Макс. цена" required>
+                <select class="form-select mb-2" id="currency">
+                    <option value="$">USD ($)</option>
+                    <option value="сум">UZS (сум)</option>
+                </select>
+            </div>
+            <div class="d-flex gap-2">
+                <input class="form-control mb-2" type="text" placeholder="Вес (кг)" required>
+                <input class="form-control mb-2" type="text" placeholder="Погрешность веса (кг)" required>
+            </div>
+            <input class="form-control mb-2" type="text" placeholder="Цена за карго" required>
             <input class="form-control mb-2" type="text" placeholder="Размеры / Варианты" required>
             <button class="btn btn-primary mt-2" type="submit">Скопировать</button>
         </form>
